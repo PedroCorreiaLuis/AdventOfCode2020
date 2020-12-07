@@ -3,6 +3,7 @@ package calendar
 import scala.annotation.tailrec
 
 object Day1 {
+
   //Day 1 part 1
   def sumTo2020Part1(ls: List[Int]): Int = {
     @tailrec

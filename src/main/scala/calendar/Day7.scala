@@ -79,7 +79,6 @@ object Day7 {
     @tailrec
     def innerMechanism(iterBagsL: List[Bags], acc: List[Bags], allBagsList: List[Bags]): List[Bags] = {
       val colours: List[String] = iterBagsL.flatMap(_.innerBags.map(_.colour))
-      colours.foreach(println)
 
       val finalBags: List[Bags] = dupeBags(colours.flatMap { colour =>
         fullBagsList.filter(bags => bags.mostOuter.colour.contains(colour))

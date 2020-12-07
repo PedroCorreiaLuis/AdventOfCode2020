@@ -3,6 +3,7 @@ package calendar
 import utils.ConversionUtils.{safeToOptionInt, safeToOptionLong}
 
 object Day4 {
+
   //Day 4 part 1
   def countValidPassports(passports: List[String]): Int = {
     val characteristics: List[String] = List("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid")
@@ -11,14 +12,14 @@ object Day4 {
 
   // Day 4 part 2
   case class Passport(
-   birthYear: Option[Int],
-   issueYear: Option[Int],
-   expirationYear: Option[Int],
-   height: Option[Int],
-   hairColour: Option[String],
-   eyeColour: Option[String],
-   pid: Option[Long]
- )
+    birthYear: Option[Int],
+    issueYear: Option[Int],
+    expirationYear: Option[Int],
+    height: Option[Int],
+    hairColour: Option[String],
+    eyeColour: Option[String],
+    pid: Option[Long]
+  )
 
   def convertToPassport(passports: List[String]): List[Passport] = {
     def getStringAfterColons(str: Option[String]): Option[String] = {

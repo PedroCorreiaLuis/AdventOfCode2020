@@ -5,6 +5,7 @@ import scala.io.BufferedSource
 import scala.io.Source.fromFile
 
 object FileUtils {
+
   def readFromTargetFile(input: String): List[String] = {
     val source: BufferedSource = fromFile(input)
     val lines: List[String] = source.getLines().toList

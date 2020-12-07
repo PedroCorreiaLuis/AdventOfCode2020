@@ -5,6 +5,7 @@ import utils.FileUtils.readFromTargetFile
 import scala.annotation.tailrec
 
 object Day3 {
+
   //Day 3 part 1/2
   def countNumberTrees(horizontalMovementScale: Int = 3, verticalMovement: Int = 1): Long = {
     val lines: List[String] = readFromTargetFile(

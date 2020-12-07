@@ -3,6 +3,7 @@ package utils
 import scala.util.Try
 
 object ConversionUtils {
+
   def safeToOptionInt(in: String): Option[Int] = {
     Try(in.toInt).toOption
   }

@@ -3,6 +3,7 @@ package calendar
 import scala.annotation.tailrec
 
 object Day5 {
+
   //Day 5 part 1
   def getSeatIds(ls: List[String], numberOfRows: Int = 127, numberOfSeats: Int = 7): List[Int] = {
     ls.map { seat =>

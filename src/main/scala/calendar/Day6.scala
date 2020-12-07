@@ -3,6 +3,7 @@ package calendar
 import scala.annotation.tailrec
 
 object Day6 {
+
   //Day 6 part 1
   def sumAnyonesYes(ls: List[String]): Int = {
     ls.map(_.filter(_.isLetter).distinct.length).sum
