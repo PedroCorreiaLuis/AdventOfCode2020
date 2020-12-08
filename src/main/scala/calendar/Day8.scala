@@ -51,4 +51,27 @@ object Day8 {
     indexes.map(index => (index, instructions(index))).filterNot(_._2.startsWith("acc"))
   }
 
+  def changeInstruction(instruction: String): String = {
+    val reshapedInstruction = instruction.drop(3)
+    if (instruction.startsWith("nop")) "jmp" + reshapedInstruction
+    else if (instruction.startsWith("jmp")) "nop" + reshapedInstruction
+    else instruction
+  }
+
+  //Made this automatic runner after the solution
+  def runner(maybeFaultyOperations: List[Int], instructions: List[String]): Unit = {
+    maybeFaultyOperations.foreach { index =>
+      val oldInstruction: String = instructions(index)
+      val newInstruction: String = changeInstruction(oldInstruction)
+      val newInstructions: List[String] = instructions.take(index) ++ List(newInstruction) ++ instructions.drop(
+        index + 1
+      )
+      println(s"Program numb: $index, old instruction $oldInstruction, new instruction $newInstruction")
+      println(s"new instructions: $newInstructions")
+      program(newInstructions)
+      println("program ended")
+    }
+
+  }
+
 }

@@ -302,7 +302,7 @@ acc -7
 acc +14
 nop +315
 acc +11
-nop -47
+jmp -47
 nop -36
 acc +40
 jmp +95
