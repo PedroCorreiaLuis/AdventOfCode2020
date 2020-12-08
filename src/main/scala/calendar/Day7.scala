@@ -31,15 +31,6 @@ object Day7 {
     }
   }
 
-  def countValidBags(colour: String, quantity: Int, bagsList: List[Bags]): Int = {
-    bagsList.count { bags =>
-      val mostOuterColour: String = bags.mostOuter.colour
-      mostOuterColour != colour && bags
-        .innerBags
-        .exists(bag => bag.colour == colour && quantity <= bag.quantity)
-    }
-  }
-
   def filterBags(colour: String, quantity: Int, bagsList: List[Bags]): List[Bags] = {
     val bagsFirst: List[Bags] = bagsList.filter { bags =>
       bags.innerBags.exists(bag => bag.colour.contains(colour) && quantity <= bag.quantity)
