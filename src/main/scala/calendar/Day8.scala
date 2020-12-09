@@ -1,7 +1,5 @@
 package calendar
 
-import utils.ConversionUtils.safeToOptionInt
-
 import scala.annotation.tailrec
 
 object Day8 {
