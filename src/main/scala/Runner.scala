@@ -1,12 +1,13 @@
-import calendar.Day9._
+import calendar.Day10._
 import utils.FileUtils.readFromTargetFile
 
 object Runner extends App {
 
-  val lines = readFromTargetFile("/Users/pedrocorreialuis/IdeaProjects/AdventOfCode2020/src/resources/inputDay9")
+  val lines = readFromTargetFile("/Users/pedrocorreialuis/IdeaProjects/AdventOfCode2020/src/resources/inputDay10Test")
 
-  println(findOutlier(lines, 25))
+  println(countVoltage(convertToVoltages(lines)))
+  // 22 10
+  // 7 5
+  println(countArrangementsBruteForce(convertToVoltages(lines), 7, 5))
 
-  val res = findSubList(lines.map(_.toLong), 1038347917).sorted
-  println(findEncryptedValue(res))
 }

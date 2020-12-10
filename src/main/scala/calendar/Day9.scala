@@ -55,7 +55,7 @@ object Day9 {
   }
 
   def findEncryptedValue(ls: List[Long]): Long = {
-    val sortedList = ls.sorted
+    val sortedList: List[Long] = ls.sorted
     (sortedList.headOption ++ sortedList.lastOption).toList.sum
   }
 }
