@@ -3,11 +3,8 @@ import utils.FileUtils.readFromTargetFile
 
 object Runner extends App {
 
-  val lines = readFromTargetFile("/Users/pedrocorreialuis/IdeaProjects/AdventOfCode2020/src/resources/inputDay10Test")
+  val lines = readFromTargetFile("/Users/pedrocorreialuis/IdeaProjects/AdventOfCode2020/src/resources/inputDay10")
 
-  println(countVoltage(convertToVoltages(lines)))
-  // 22 10
-  // 7 5
-  println(countArrangementsBruteForce(convertToVoltages(lines), 7, 5))
+  println(countArrangements(convertToVoltages(lines)))
 
 }

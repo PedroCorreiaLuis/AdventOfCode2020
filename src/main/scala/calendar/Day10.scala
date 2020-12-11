@@ -45,8 +45,7 @@ object Day10 {
   // had a little help, this formula:
   // path_count(Adapter) = sum(path_count(Adapter - 1), path_count(Adapter - 2), (Adapter - 3))
   def countArrangements(voltageList: List[Int]): Long = {
-    val maxVoltage: Int = voltageList.max + 3
-    val allVoltage: List[Int] = voltageList :+ maxVoltage
+    val maxVoltage: Int = voltageList.max
 
     @tailrec
     def aux(voltsList: List[Int], aggregatorLookup: Map[Int, Long]): Long = {
@@ -58,7 +57,7 @@ object Day10 {
       }
     }
 
-    aux(allVoltage, Map(0 -> 1L).withDefaultValue(0))
+    aux(voltageList, Map(0 -> 1L).withDefaultValue(0))
   }
 
 }
