@@ -1,12 +1,11 @@
-import calendar.Day11._
+import calendar.Day12._
 import utils.FileUtils.readFromTargetFile
 
 object Runner extends App {
 
-  val lines = readFromTargetFile("/Users/pedrocorreialuis/IdeaProjects/AdventOfCode2020/src/resources/inputDay11")
+  val lines = readFromTargetFile("/Users/pedrocorreialuis/IdeaProjects/AdventOfCode2020/src/resources/inputDay12")
 
-  val finalMap = runner2(constructMap(lines))
-
-  println(countOccupiedSeats(finalMap))
+  println(calculateManhattanDistance(runInstructions(convertToInstructions(lines), "E")))
+  //1877
 
 }
